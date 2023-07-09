@@ -1,0 +1,19 @@
+program PrintWordsSeparately;
+var
+  sentence: string;
+
+procedure PrintWords(sentence: string);
+var
+  words: TStringArray;
+  i: Integer;
+begin
+  words := sentence.Split([' ']);
+
+  for i := 0 to High(words) do
+    Writeln(words[i]);
+end;
+
+begin
+  sentence := 'Это пример предложения, которое будет разделено на отдельные слова';
+  PrintWords(sentence);
+end.
